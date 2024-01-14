@@ -21,8 +21,60 @@ Your task is to create a backend system using Node.js that enables users to uplo
    - Implement an API endpoint to fetch the results of an analysis task using the taskId.
    - The response should return the results of the requested analysis operation.
 
+
 ## *Database Requirements:*
 - Select a suitable database (options include SQL, NoSQL, or Redis) for storing file metadata and analysis results.
 - Your database schema should be designed to efficiently facilitate the operations required by the system.
 - You can use ORM such as Prisma to interact with the database.
 
+# Prisma Schema Summary
+
+## Overview
+
+This Prisma schema defines the data models for a MongoDB database using Prisma Client. The schema includes two models, `File` and `AnalysisResult`, to represent files uploaded to the system and the results of various analyses performed on those files.
+
+## Models
+
+### 1. File
+
+- **Fields:**
+  - `id`: Auto-generated unique identifier for the file record.
+  - `fileId`: Unique identifier for the file, often generated based on a timestamp.
+  - `filename`: The name of the uploaded file.
+  - `uploadDate`: Date and time when the file was uploaded, set to the current timestamp by default.
+
+### 2. AnalysisResult
+
+- **Fields:**
+  - `id`: Auto-generated unique identifier for the analysis result record.
+  - `taskId`: Unique identifier for the analysis task, often generated based on a specific operation.
+  - `fileId`: Reference to the corresponding `File` that the analysis result belongs to.
+  - `operation`: The type of analysis operation performed.
+  - `result`: JSON data representing the result of the analysis operation.
+
+## Datasource
+
+The schema specifies a MongoDB datasource named `db` with the `mongodb` provider. The connection URL is configured through the `DATABASE_URL` environment variable available in the .env file which is to be created in the root directory.
+
+## Prisma Client
+
+The Prisma schema includes a `client` block specifying the use of the "prisma-client-js" provider, indicating the generation of a Prisma Client for JavaScript.
+
+## Notes
+
+- The `ObjectId` type is used for identifiers in MongoDB.
+- The schema assumes the existence of a MongoDB database with a connection URL provided through the `DATABASE_URL` environment variable.
+
+
+## sample .env file structure
+```
+DATABASE_URL="mongodb+srv://<username>:<password>@cluster.mongodb.net/<database_name>"
+UPLOAD_PATH="uploads"
+```
+# modify the DATABASE_URL according to the connection string in mongodb atlas
+
+## installing dependencies
+```
+npm i
+
+```
