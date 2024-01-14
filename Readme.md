@@ -83,4 +83,4 @@ node index.js
 
 ## Use this api endpoint to run the backend requests in postman
 ### Import the collection into your postman workspace by using this url
-https://api.postman.com/collections/14912192-a8b6cd95-f84b-42ed-854f-4199b1a6c28b?access_key=PMAT-01HM4PPRWX5HCM8MY57WVKTQCV
+https://api.postman.com/collections/14912192-543839b9-18e4-4a59-9f4c-12ce17363f7a?access_key=PMAT-01HM4RG3652ETRGCG890198FCG
