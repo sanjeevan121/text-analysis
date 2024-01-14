@@ -71,10 +71,16 @@ The Prisma schema includes a `client` block specifying the use of the "prisma-cl
 DATABASE_URL="mongodb+srv://<username>:<password>@cluster.mongodb.net/<database_name>"
 UPLOAD_PATH="uploads"
 ```
-# modify the DATABASE_URL according to the connection string in mongodb atlas
+### modify the DATABASE_URL according to the connection string in mongodb atlas
 
-## installing dependencies
+## installing dependencies and start the server
 ```
 npm i
 
+node index.js
+
 ```
+
+## Use this api endpoint to run the backend requests in postman
+### Import the collection into your postman workspace by using this url
+https://api.postman.com/collections/14912192-a8b6cd95-f84b-42ed-854f-4199b1a6c28b?access_key=PMAT-01HM4PPRWX5HCM8MY57WVKTQCV

@@ -1,0 +1,18 @@
+1) EOA 1 -contract creation - 1 trillion supply
+2) transfer ~ 0.6% to 0x00..dEaD - 2.4 billion
+   transfer ~ 99.4% to EOA 2
+3) Multisend tokens from EOA 2 to 190 random EOAs
+
+EOA 2 transfers below 
+4) transfer 17 B tokens to mexc.com
+5) transfer 25 B tokens to gate.io
+6) transfer 27 B tokens to Huobi 1
+7) transfer 27 B tokens to Kukoin: hot wallet 2
+8) transfer 26 B tokens to Binance: Hot wallet 6
+9) transfer 28 B tokens to Binance: Hot wallet 7
+10) transfer 28 B tokens to mexc.com 3
+11) 30 B to pinksale pinklock v2
+12) 173 B to 0x..dEaD
+13) EOA 1 add liquidity - 3 wbnb (pancake V2)
+
+continue coding in honeypot3 file
