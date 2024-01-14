@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL") // You can configure this based on your environment
+}
+
+
+model File {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  fileId     String    @unique
+  filename   String
+  uploadDate DateTime  @default(now())
+}
+
+model AnalysisResult {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  taskId    String    @unique
+  fileId    String
+  operation String
+  result    Json
+}
