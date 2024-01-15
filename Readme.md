@@ -76,7 +76,7 @@ UPLOAD_PATH="uploads"
 ## installing dependencies and start the server
 ```
 npm i
-
+npx prisma generate
 node index.js
 
 ```
